@@ -5,10 +5,10 @@
 2. Typography
     variant: h1 to h6, subtitle1, subtitle2, body1, body2
 3. Buttons
-    variant: default, contained and outlined
+    variant: text/default, contained and outlined
     props -> disabled, href, disableElevation,
     event -> onClick etc
-    color -> secondary, success, error
+    color -> primary, secondary, success, error, warning, info
     component="label"
 
     IconButton: aria-label=> "upload picture" or "delete"

@@ -1,5 +1,5 @@
 import { 
-  Button, Typography, IconButton, 
+  Button, Typography, IconButton, Stack, ButtonGroup, ToggleButton, ToggleButtonGroup,
 } from '@mui/material'
 import LoadingButton from '@mui/lab/LoadingButton';
 
@@ -14,41 +14,45 @@ import SaveIcon from '@mui/icons-material/Save'
 function MuiButtons() {
   return (
     <>
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Text button</Typography>
         <Button>Primary</Button>
         <Button disabled>Disabled</Button>
         <Button href="#text-buttons">Link</Button>
-      </div>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Contained button</Typography>
         <Button variant="contained">Contained</Button>
         <Button variant="contained" disabled>Disabled</Button>
         <Button variant="contained" href="#contained-buttons">Link</Button>
         <Button variant="contained" disableElevation>Disable elevation</Button>
-      </div>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Outlined button</Typography>
         <Button variant="outlined">Primary</Button>
         <Button variant="outlined" disabled>Disabled</Button>
         <Button variant="outlined" href="#outlined-buttons">Link</Button>
-      </div>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Handling clicks</Typography>
         <Button onClick={() => { alert('clicked') }}>Click me</Button>
-      </div>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack display='flex' direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Color</Typography>
         <Button color="secondary">Secondary</Button>
+        <Button variant="contained" color="primary">primary</Button>
+        <Button variant="contained" color="secondary">secondary</Button>
         <Button variant="contained" color="success">Success</Button>
-        <Button variant="outlined" color="error">Error</Button>
-      </div>
+        <Button variant="contained" color="error">error</Button>
+        <Button variant="contained" color="warning">warning</Button>
+        <Button variant="contained" color="info">Info</Button>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Upload button</Typography>
         <Button variant="contained" component="label">
           Upload
@@ -58,9 +62,9 @@ function MuiButtons() {
           <input accept="image/*" type="file" />
           <PhotoCamera />
         </IconButton>      
-      </div>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Buttons with icons and label</Typography>
         <Button variant="outlined" startIcon={<DeleteIcon />}>Delete</Button>
         <Button variant="contained" endIcon={<SendIcon />}>Send</Button>
@@ -68,15 +72,15 @@ function MuiButtons() {
         <IconButton aria-label="delete" disabled color="primary"><DeleteIcon /></IconButton>
         <IconButton color="secondary" aria-label="add an alarm"><AlarmIcon /></IconButton>
         <IconButton color="primary" aria-label="add to shopping cart"><AddShoppingCartIcon /></IconButton>
-      </div>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Fingerprint</Typography>
         <IconButton aria-label="fingerprint" color="secondary"><Fingerprint /></IconButton>
         <IconButton aria-label="fingerprint" color="success"><Fingerprint /></IconButton>
-      </div>
+      </Stack>
 
-      <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
         <Typography variant='h4'>Loading.....</Typography>
         <LoadingButton loading variant="outlined">Submit</LoadingButton>
         <LoadingButton loading loadingIndicator="Loading…" variant="outlined">Fetch data</LoadingButton>
@@ -88,7 +92,15 @@ function MuiButtons() {
         >
           Save
         </LoadingButton>      
-      </div>
+      </Stack>
+      <Stack direction='row' spacing={2} style={{ marginBottom: '10px' }}>
+        <Typography color='info'>Button Groups</Typography>
+        <ButtonGroup variant='contained' size='large'>
+          <Button>Left</Button>
+          <Button>Middle</Button>
+          <Button>Right</Button>
+        </ButtonGroup>
+      </Stack>
     </>
   )
 }
