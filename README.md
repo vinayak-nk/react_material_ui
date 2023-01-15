@@ -15,3 +15,10 @@
 
     LoadingButton: '@mui/lab/LoadingButton'
     Icons: '@mui/icons-material/' => PhotoCamera, Delete, Send, Alarm, Save, Fingerprint, Cart etc
+
+4. TextField
+  variant="outlined/filled/standard"
+  attributes => required, disabled, type, helperText, defaultValue, autoComplete, InputProps, InputLabelProps, 
+  multiline =>  row={4} maxRows={4}, defaultValue="Default Value"
+  InputAdornment => prefix and suffix
+  size, margin, fullWidth, 
